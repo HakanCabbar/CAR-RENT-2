@@ -1,0 +1,21 @@
+﻿@{ ViewBag.Title = "Login"; }
+
+
+<div class="loginbox">
+
+    <form class="MusteriLogin" action="/Employee/LoginForm" method="post">
+        <h1>Admin Giriş Formu </h1>
+
+        <p>Admin İsmi</p>
+        <input type="text" name="EmployeeName" id="ad" /> <br />
+        <p>Admin Şifresi</p>
+        <input type="text" name="EmployeeSurname" id="sifre" /> <br />
+
+        <button type="submit" class="btnKullanici3"> @Html.ActionLink("Giriş Yap", "Loginform", "Employee")</button>
+        <button class="btnKullanici">  @Html.ActionLink("Kayıt Ol", "Create", "Employee")</button>
+    </form>
+</div>
+
+
+
+

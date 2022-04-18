@@ -1,0 +1,50 @@
+﻿@model IEnumerable<CarRental.Entity.Concretes.Car>
+
+@{ ViewBag.Title = "All Cars"; }
+
+
+
+
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+<div class="container">
+    @foreach (var item in Model)
+    {
+    <div class="card">
+        <h1 style="color: black;">@item.CarName</h1>
+        
+        <div class="image-area">
+            <img src="~/Content/CSS/carr.jpg" >
+        </div>
+      
+        <form  action="Rentcar" method="post">
+            <div class="form-group">
+                <label for="">Arabanın ID Değeri: </label>
+                <input class="readony-text" type="text" name="aracID" value="@item.CarID" readonly />
+            </div>
+            <div class="form-group">
+                <label for="">Arabanın Modeli: </label>
+                <input class="readony-text" type="text" name="aracModel" value="@item.CarModel" readonly />
+            </div>
+            <div class="form-group">
+                <label for="">Arabanın Günlük Ücreti: </label>
+                <input class="readony-text" type="text" name="aracUcret" value="@item.RentFeeDaily" readonly />
+            </div>
+            <div class="form-group">
+                <label for="">Arabanın Kilometresi: </label>
+                <input class="readony-text" type="text" name="aracKM" value="@item.CarTotalKM" readonly />
+            </div>
+            <div class="form-group">
+                <label for="">Arabanın Koltuk Sayısı: </label>
+                <input class="readony-text" type="text" name="aracoltuk" value="@item.CarTotalSeats" readonly />
+            </div>
+            <button type="submit" class="delete-button">Kirala</button>
+        </form>
+        
+    </div>
+    }
+
+</div>

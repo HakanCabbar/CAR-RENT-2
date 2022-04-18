@@ -1,0 +1,52 @@
+﻿
+@{
+    ViewBag.Title = "RentRequests";
+}
+
+<h2>RentRequests</h2>
+
+<div class="container">
+    @foreach (var item in Model)
+    {
+    <div class="card">
+        <h1 style="color: black;">@item.CarName</h1>
+
+        <div class="image-area">
+            <img src="~/Content/CSS/carr.jpg">
+        </div>
+        <ul>
+            <li>Arabanın Modeli:@item.CarModel</li>
+            <li>Arabanın Modeli:@item.RentFeeDaily</li>
+            <li>Arabanın Total Kilometresi @item.CarTotalKM</li>
+            <li>Arabanın Koltuk Sayısı @item.CarTotalSeat</li>
+
+        </ul>
+        <button type="submit" class="delete-button">Onayla </button>
+        <button type="submit" class="delete-button"> Reddet</button>
+        @*<form action="/Car/RentCar" method="post">
+            <div class="form-group">
+                <label for="">Arabanın ID: </label>
+                <input class="readony-text" type="text" name="aracID" value="@item.CarID" readonly />
+            </div>
+            <div class="form-group">
+                <label for="">Arabanın Modeli: </label>
+                <input class="readony-text" type="text" name="aracModel" value="@item.CarModel" readonly />
+            </div>
+            <div class="form-group">
+                <label for="">Arabanın Günlük Ücreti: </label>
+                <input class="readony-text" type="text" name="aracUcret" value="@item.RentFeeDaily" readonly />
+            </div>
+            <div class="form-group">
+                <label for="">Arabanın Kilometresi: </label>
+                <input class="readony-text" type="text" name="aracKM" value="@item.CarTotalKM" readonly />
+            </div>
+            <div class="form-group">
+                <label for="">Arabanın Koltuk Sayısı: </label>
+                <input class="readony-text" type="text" name="aracoltuk" value="@item.CarTotalSeats" readonly />
+            </div>
+            <button type="submit" class="delete-button">Silmek Icin Tikla</button>
+        </form>*@
+
+    </div>}
+
+</div>

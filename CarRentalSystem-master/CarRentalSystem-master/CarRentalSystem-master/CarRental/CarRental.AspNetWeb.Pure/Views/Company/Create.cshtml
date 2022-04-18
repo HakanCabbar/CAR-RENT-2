@@ -1,0 +1,39 @@
+﻿@model CarRental.Entity.Concretes.Company
+
+@{ ViewBag.Title = "Create Company"; }
+
+<h2>@ViewBag.Title</h2>
+
+<div class="loginbox">
+
+
+    @using (Html.BeginForm())
+    {
+@Html.AntiForgeryToken()
+
+                <form class="ArabaKayit" method="post">
+                    <h1>Şirket Kayıt Formu </h1>
+
+                    <p>Şirket İsmi</p>
+                    <input type="text" name="CompanyName" />  <br />
+                    <p>Şirket Şehri</p>
+                    <input type="text" name="City" />  <br />
+                    <p>Şirket Adresi </p>
+                    <input type="text" name="Address" />  <br />
+                    <p> Şirketin Total Araba Sayısı</p>
+                    <input type="text" name="TotalCars" />  <br />
+                    <button type="submit" class="btnKullanici2">Şirketi Kaydet</button>
+
+
+
+
+                </form>}}
+</div>
+
+<div>
+    @Html.ActionLink("Back to List of Companies", "ListAll")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

@@ -1,0 +1,41 @@
+﻿@model CarRental.Entity.Concretes.Customer
+
+@{ ViewBag.Title = "Create Customer"; }
+
+<h2>@ViewBag.Title</h2>
+
+
+
+<div class="loginbox">
+    @using (Html.BeginForm())
+    {
+@Html.AntiForgeryToken()
+
+                <form class="ArabaKayit" method="post">
+                    <h1>Müşteri Kayıt Formu </h1>
+
+                    <p>Müşteri İsmi</p>
+                    <input type="text" name="CustomerName" /> <br />
+                    <p>Müşteri Soyismi</p>
+                    <input type="text" name="CustomerSurname" /> <br />
+                    <p>Telefon No </p>
+                    <input type="text"  name="PhoneNumber" /> <br />
+                    <p> E Mail</p>
+                    <input type="text"  name="Email" />  <br />
+                    <button type="submit" class="btnKullanici2">Müşteri Kaydet</button>
+
+
+
+
+                </form>}
+
+</div>
+
+
+<div>
+    @Html.ActionLink("Back to List of Customers", "ListAll")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

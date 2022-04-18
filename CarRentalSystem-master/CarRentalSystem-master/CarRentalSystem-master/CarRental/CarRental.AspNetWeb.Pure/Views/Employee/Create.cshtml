@@ -1,0 +1,39 @@
+﻿@model CarRental.Entity.Concretes.Employee
+
+@{ ViewBag.Title = "Create Employee"; }
+
+<h2>@ViewBag.Title</h2>
+
+
+<div class="loginbox">
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <form class="ArabaKayit" method="post">
+            <h1>Admin Kayıt Formu </h1>
+
+            <p>Admin İsmi</p>
+            <input type="text" name="EmployeeName" /> <br />
+            <p>Admin Soyismi</p>
+            <input type="text" name="EmployeeSurname" /> <br />
+            <p>E mail </p>
+            <input type="text" name="Email" /> <br />
+            <p>Şirket ID</p>
+            <input type="text" name="CompanyID" />  <br />
+            <button type="submit" class="btnKullanici2">Admin Kaydet</button>
+
+
+
+
+        </form>
+    }
+</div>
+
+<div>
+    @Html.ActionLink("Back to List of Employees", "ListAll")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

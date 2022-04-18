@@ -1,0 +1,70 @@
+﻿@using System.Activities.Statements
+@using System.Runtime.Remoting.Messaging
+@model CarRental.Entity.Concretes.Company
+
+@{ ViewBag.Title = "Details"; }
+
+<h2>Details</h2>
+
+<div>
+    <h4>Company</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CompanyName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CompanyName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.City)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.City)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalCars)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotalCars)
+        </dd>
+
+    </dl>
+</div>
+@*<div>
+    <h4>Rent Infos</h4>
+    <hr />
+    @foreach (var item in Model.RentInfos)
+    {
+<dl class="dl-horizontal">
+    <dt>
+        @Html.Raw("Rent Infos")
+    </dt>
+
+    <dt>
+        @Html.Raw("Rent Dates:")
+    </dt>
+
+    <dd>
+        @Html.Raw("Start: " +item.RentDateStart.ToLongDateString() + "      End: " + item.RentDateEnd.ToLongTimeString())
+    </dd>
+</dl>}
+</div>*@
+
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CompanyID }) |
+    @Html.ActionLink("Back to List", "ListAll")
+</p>

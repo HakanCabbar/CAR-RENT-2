@@ -1,0 +1,186 @@
+﻿
+body {
+    background: url(car.jpg) center center no-repeat;
+}
+.loginbox {
+    background: rgba(0, 0, 0, .8);
+    width: 60%;
+    height: 550px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:auto;
+    margin-top:250px;
+}
+
+  .loginbox input[type="text"] {
+       
+        
+        background-color: white;
+        height: 40px;
+        margin-right:450px;
+    }
+
+
+/*.body-content {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: url(carxs.jpg) center center no-repeat;
+    z-index: 31;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}*/
+
+h1 {
+    color: white;
+    text-align: center;
+    margin-top:70px;
+}
+p{
+    color:white;
+    margin-left:15px
+}
+
+button {
+    background-color:orange;
+    margin-left: 40%;
+    margin-bottom:100px;
+    color: white;
+}
+
+h3 {
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+.btnKullanici {
+    background-color:orange!important;
+    padding: 10px 20px;
+    color: #fff;
+    margin-top:50px;
+    margin-left:70px;
+}
+
+
+.btnKullanici3 {
+    background-color: orange !important;
+    padding: 10px 20px;
+    color: #fff;
+    margin-top: 50px;
+    margin-left: 150px;
+}
+
+.btnKullanici2 {
+    background-color: orange !important;
+    padding: 10px 20px;
+    color: #fff;
+    margin-top: 50px;
+    margin-left: 39%;
+}
+
+
+
+
+
+.btnAdmin {
+    background-color:orange;
+    padding: 10px 20px;
+    color: #fff;  
+    margin-left: 70px;
+}
+
+#btnGiris {
+    background-color: orange;
+    padding: 10px 20px;
+    color: #fff;
+    margin-left: 40%;
+    margin-top:50px;
+}
+
+.dropdown-item{
+
+    color:blue;
+}
+
+
+
+
+.container {
+    margin: 0 auto;
+    padding: 40px;
+    
+    border-radius: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px
+}
+
+.delete-button {
+    padding: 6px 16px;
+    font-size: 20px;
+    border-radius: 10px;
+    background: greenyellow;
+    margin: 10px auto;
+    display: block;
+}
+
+    .delete-button:hover {
+        cursor: pointer;
+        background: green;
+        color: white;
+    }
+
+
+.img-area > img {
+    max-height: 7000px;
+    max-width:300px;
+    margin: 30px auto;
+    display: block;
+}
+
+.card {
+    width: 300px;
+    border-radius: 16px;
+    padding: 10px;
+    box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, .4);
+    background-color:white;
+}
+
+.image-area > img {
+    max-height: 180px;
+    margin: 30px auto;
+    display: block;
+}
+
+h1 {
+    text-align: center;
+}
+
+.desc {
+    font-size: 30px;
+}
+
+
+.customer{
+
+    color:white;
+}
+
+.btnKayt {
+    background-color: orange;
+    padding: 10px 20px;
+    color: #fff;
+    margin-left: 60px;
+}
+#btnGiris {
+    background-color: orange;
+    padding: 10px 20px;
+    color: #fff;
+    margin-left: 165px;
+}

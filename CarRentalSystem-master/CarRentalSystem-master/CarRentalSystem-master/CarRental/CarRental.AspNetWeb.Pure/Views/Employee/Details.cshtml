@@ -1,0 +1,70 @@
+﻿@using System.Activities.Statements
+@using System.Runtime.Remoting.Messaging
+@model CarRental.Entity.Concretes.Employee
+
+@{ ViewBag.Title = "Details"; }
+
+<h2>Details</h2>
+
+<div>
+    <h4>Employee</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.EmployeeName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmployeeName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EmployeeSurname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmployeeSurname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CompanyID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CompanyID)
+        </dd>
+
+    </dl>
+</div>
+<div>
+    <h4>Company Info</h4>
+    <hr />
+    @*@foreach (var item in Model.RentInfos)
+    {
+<dl class="dl-horizontal">
+    <dt>
+        @Html.Raw("Rent Infos")
+    </dt>
+
+    <dt>
+        @Html.Raw("Rent Dates:")
+    </dt>
+
+    <dd>
+        @Html.Raw("Start: " +item.RentDateStart.ToLongDateString() + "      End: " + item.RentDateEnd.ToLongTimeString())
+    </dd>
+</dl>}
+</div>*@
+
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.EmployeeID }) |
+    @Html.ActionLink("Back to List", "ListAll")
+</p>

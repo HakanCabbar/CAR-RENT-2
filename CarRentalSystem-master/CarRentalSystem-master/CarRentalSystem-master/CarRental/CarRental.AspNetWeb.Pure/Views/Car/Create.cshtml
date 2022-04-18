@@ -1,0 +1,41 @@
+﻿@model CarRental.Entity.Concretes.Car
+
+
+
+<link rel="stylesheet" href="@Url.Content("~/Content/CSS/StyleSheet1.css")" type="text/css" />
+
+
+
+
+<div class="loginbox">
+    @using (Html.BeginForm())
+    {
+@Html.AntiForgeryToken()
+
+                <form class="ArabaKayit" method="post" >
+                    <h1>Araba Kayıt Formu </h1>
+
+                    <p>Araba İsmi</p>
+                    <input type="text" name="CarName" /> <br />
+                    <p>Araba Modeli</p>
+                    <input type="text" name="CarModel" /> <br />
+                    <p>Günlük Kiralama Ücreti</p>
+                    <input type="text" name="RentFeeDaily" /> <br />
+                    <p>Arabanın Total Kilometresi</p>
+                    <input type="text" name="CarTotalKM" />  <br />
+                    <p>Arabanın Koltuk Sayısı</p>
+                    <input type="text" name="CarTotalSeats" />  <br />
+                    <p>Şirket IDsi</p>
+                    <input type="text" name="CompanyID" /> <br/>
+                    <button type="submit">Aracı Kaydet</button>
+
+
+
+
+                </form>
+    }
+ </div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

@@ -1,0 +1,68 @@
+﻿@using System.Activities.Statements
+@using System.Runtime.Remoting.Messaging
+@model CarRental.Entity.Concretes.Customer
+
+@{ ViewBag.Title = "Details"; }
+
+<h2>Details</h2>
+
+<div>
+    <h4>Customer</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CustomerName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustomerName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CustomerSurname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustomerSurname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PhoneNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PhoneNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+    </dl>
+</div>
+<div>
+    <h4>Rent Infos</h4>
+    <hr />
+    @foreach (var item in Model.RentInfos)
+    {
+<dl class="dl-horizontal">
+    <dt>
+        @Html.Raw("Rent Infos")
+    </dt>
+
+    <dt>
+        @Html.Raw("Rent Dates:")
+    </dt>
+
+ 
+</dl>}
+</div>
+
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CustomerID }) |
+    @Html.ActionLink("Back to List", "ListAll")
+</p>

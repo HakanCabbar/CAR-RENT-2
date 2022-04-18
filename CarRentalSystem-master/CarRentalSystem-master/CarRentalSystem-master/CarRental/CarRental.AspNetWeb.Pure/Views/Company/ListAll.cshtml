@@ -1,0 +1,50 @@
+﻿@model IEnumerable<CarRental.Entity.Concretes.Company>
+
+@{ ViewBag.Title = "All Companies"; }
+
+<h2>@ViewBag.Title</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.Encode("Company Name")
+        </th>
+        <th>
+            @Html.Encode("City")
+        </th>
+        <th>
+            @Html.Encode("Address")
+        </th>
+        <th>
+            @Html.Encode("total Number of Cars")
+        </th>
+        <th></th>
+    </tr>
+
+
+    @foreach (var item in Model)
+    {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.CompanyName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.City)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Address)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.TotalCars)
+    </td>
+    <td>
+        @Html.ActionLink("Detail", "Details", new { id = item.CompanyID }) |
+        @Html.ActionLink("Edit", "Edit", new { id = item.CompanyID }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.CompanyID })
+    </td>
+</tr>}
+
+</table>
